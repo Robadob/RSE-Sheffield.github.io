@@ -37,14 +37,14 @@ markdown: kramdown
 #theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
 strict_front_matter: true
 defaults:
-  -
-    scope:
+  - scope:
       path: "pages"
     values:
       layout: "page"
@@ -63,3 +63,7 @@ defaults:
       type: "people"
     values:
       layout: "person"
+
+# Configure Blog
+paginate: 3
+paginate_path: /blog/page:num/
