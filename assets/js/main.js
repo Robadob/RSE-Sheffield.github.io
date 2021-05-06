@@ -113,5 +113,15 @@ jQuery(document).ready(function($) {
         }
 
     });
+    
+    /* ======= Projects Tag Cloud ======= */
+    $("a.tag-link").on( "click", function(e) {
+        e.preventDefault();
+        var tag = $(this).attr("href").substring($(this).attr("href").lastIndexOf('#') + 1);
+        $("a.tag-link.selected").removeClass("selected");
+        $(this).addClass("selected");
+        $('.project.tag-' + tag).show();
+        $('.project:not(.tag-' + tag + ')').hide();
+    });
 
 });
