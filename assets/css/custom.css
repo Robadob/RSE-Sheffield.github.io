@@ -153,6 +153,6 @@ blockquote {
 }
 
 /* project page tag cloud */
-a.tag-link.selected{
+a.tag-link.selected, a.filter-link.selected{
     font-weight: bold;
 }

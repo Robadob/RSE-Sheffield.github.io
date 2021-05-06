@@ -31,6 +31,8 @@ The Research Software Engineering team at Sheffield has worked on projects invol
 
 Some projects we have worked on (not a comprehensive list):
 
+Filter: <a class="filter-link selected" href="">All</a> &middot; <a class="filter-link" href="#active">Active</a> &middot; <a class="filter-link" href="#completed">Completed</a>
+
 {% assign levels = site.data.projects | where: 'show',1 | group_by: 'level' | sort: 'name' %}
 {% assign project_descriptions = site.project_descriptions %}
 {% assign today_date = 'now' | date: '%s' %}
