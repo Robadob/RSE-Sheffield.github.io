@@ -116,7 +116,6 @@ jQuery(document).ready(function($) {
     
     /* ======= Projects Tag Cloud ======= */
     $("a.tag-link").on( "click", function(e) {
-        //e.preventDefault();
         var tag = $(this).attr("href").substring($(this).attr("href").lastIndexOf('#') + 1);
         $("a.tag-link.selected").removeClass("selected");
         $("a.filter-link.selected").removeClass("selected");
@@ -125,7 +124,6 @@ jQuery(document).ready(function($) {
         $('.project:not(.tag-' + tag + ')').hide();
     });
     $("a.filter-link").on( "click", function(e) {
-        //e.preventDefault();
         $("a.tag-link.selected").removeClass("selected");
         $("a.filter-link.selected").removeClass("selected");
         $(this).addClass("selected");

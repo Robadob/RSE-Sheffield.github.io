@@ -75,4 +75,14 @@ Filter: <a class="filter-link selected" href="">All</a> &middot; <a class="filte
         <hr/>
     {% endfor %}
 </div>
-
+<script>
+window.addEventListener('load', (event) => {
+    var offset = window.location.href.lastIndexOf('#');
+    if (offset != -1) {
+        var tag = window.location.href.substring(offset);
+        // Find the matching tag
+        $("a.tag-link[href$='"+tag+"']").trigger("click");
+        $("a.filter-link[href$='"+tag+"']").trigger("click");
+    }
+});
+</script>
