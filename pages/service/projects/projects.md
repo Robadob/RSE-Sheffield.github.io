@@ -27,7 +27,7 @@ The Research Software Engineering team at Sheffield has worked on projects invol
 {% assign all_tags = all_tags | concat: proj_tags %}
 {% endfor %}
 {% assign all_tags = all_tags | sort_natural | uniq %}
-{% for tag in all_tags %}<a class="tag-link" href="#{{ tag | replace: " ", "-" }}">{{ tag }}</a>{% if tag != all_tags.last %} &middot; {% endif %}{% endfor %}
+{% for tag in all_tags %}<a class="tag-link" href="#{{ tag | replace: " ", "-" }}">{{ tag | replace: " ", "&nbsp;"}}</a>{% if tag != all_tags.last %} &middot; {% endif %}{% endfor %}
 
 Some projects we have worked on (not a comprehensive list):
 
