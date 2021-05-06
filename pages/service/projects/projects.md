@@ -44,7 +44,8 @@ Some projects we have worked on (not a comprehensive list):
         {% else %}
             {% assign current = false %}
         {% endif %}
-        <div class="{% if current %}active{% else %}completed{% endif %}">
+        {% assign proj_tags = project.tech_methods | split: ", " %}
+        <div class="project {% if current %}active{% else %}completed{% endif %}{% for tag in proj_tags %} tag-{{ tag | replace: " ", "-" }}{% endfor %}">
             <b>{{project.long_title}} </b>
             {% if current %}
                 (Active project)
