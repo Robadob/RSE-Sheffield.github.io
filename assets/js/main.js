@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
     
     /* ======= Projects Tag Cloud ======= */
     $("a.tag-link").on( "click", function(e) {
-        var tag = $(this).attr("href").substring($(this).attr("href").lastIndexOf('#') + 1);
+        var tag = $(this).attr("href").substring($(this).attr("href").firstIndexOf('#') + 1);
         $("a.tag-link.selected").removeClass("selected");
         $("a.filter-link.selected").removeClass("selected");
         $(this).addClass("selected");
